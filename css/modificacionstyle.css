@@ -1,0 +1,92 @@
+/*******************************************************************************************/
+/*                     HOJA DE ESTILO PARA FORMULARIO MODIFICACIÓN                         */
+/*                         TRABAJO REALIZADO POR ALBA ROMERO                               */
+/*                                  VERSIÓN: 1.1.0                                         */
+/*                          LENGUAJE DE MARCAS (2ºTRIMESTRE)                               */
+/*******************************************************************************************/
+
+@font-face {
+	font-family: titulo;
+	src: url(../fonts/LilitaOne-Regular.ttf);
+}
+
+body{margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background-image: url(../img/fondolistado.jpg);
+	background-size: cover;
+	background-position: 18%;}
+
+.form {background-color: #68b88b8c;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 550px;
+    padding: 20px;
+    width: 800px;}
+
+.title {color: #eee;
+    font-family: titulo;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;}
+
+.input-container {height: 50px;
+    position: relative;
+    width: 100%;}
+
+.ic1 {margin-top: 40px;}
+
+.ic2 {margin-top: 30px;}
+
+.input {background-color: #fdfdfd67;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #036666;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;}
+
+.cut {background-color: #68b88b8c;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;}
+
+.cut-short {width: 50px;}
+
+.iLabel {color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;}
+
+.submit {background-color: #036666;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    text-align: center;
+    width: 100%;}
+
+.submit:active {background-color: #0e7e7e;}
