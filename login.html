@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>La Fabrica de Chuches</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/loginandcrudstyle.css">
 	<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -13,11 +14,13 @@
 			<div class="login">
 				<form>
 					<label id="creartext" for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
+					<input type="text" name="user" placeholder="Usuario" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Let's Go</button>
+					<button class="letgo">Let's Go</button>
 				</form>
 			</div>
 	</div>
+	<script src="./js/validlogin.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 </html>
