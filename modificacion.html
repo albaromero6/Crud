@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificación</title>
-    <link rel="stylesheet" href="./css/modificacionstyle.css">
+    <link rel="stylesheet" href="./css/insercionstyle.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -12,33 +12,33 @@
         <div class="title">NUEVO PEDIDO</div>
 
         <div class="input-container ic1">
-            <input placeholder="Nombre" type="text" class="input" id="nombre" value="Marina">
+            <input placeholder="Nombre *" type="text" class="input" id="nombre" required value="Marina">
             <div class="cut"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Apellido" type="text" class="input" id="apellido" value="Alcaide">
+            <input placeholder="Apellido *" type="text" class="input" id="apellido" required value="Alcaide">
             <div class="cut"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Correo Electrónico" type="email" class="input" id="email" value="marinalcaidet@gmail.com">
+            <input placeholder="Correo Electrónico *" type="email" class="input" id="email" required value="marinaalcaidet@gmail.com">
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="DNI" type="text" class="input" id="dni" value="44667859N">
+            <input placeholder="DNI o NIE *" type="text" class="input" id="dni" required value="44667859N">
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Importe" type="text" class="input" id="pago" value="215">
+            <input placeholder="Importe *" type="text" class="input" id="pago" required value="215">
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <select class="input" id="producto">
-                <option value="" disabled selected>Seleccione el producto</option>
+            <select class="input" id="producto" required>
+                <option value="" disabled selected>Seleccione el producto *</option>
                 <option value="1">Piruletas</option>
                 <option value="2">Golosinas</option>
                 <option value="3" selected>Nubes</option>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="input-container ic2">
-            <div class="titulo">¿Quiere factura?</div>
+            <div class="titulo">¿Quiere factura? *</div>
             <input type="radio" id="factura_si" name="factura" value="si" checked>
             <label for="factura_si">Sí</label>
             <input type="radio" id="factura_no" name="factura" value="no">
@@ -55,12 +55,12 @@
         </div>
 
         <div class="input-container ic2">
-            <div class="titulo">¿Quiere recibir información acerca de nuestras ofertas?</div>
+            <div class="titulo">Acepto recibir información acerca de ofertas *</div>
             <input type="checkbox" id="ofertas" name="ofertas" checked>
             <label for="ofertas">Sí</label>
         </div>
 
-        <button class="submit" type="text">Crear</button>
+        <button class="submit" type="submit">Crear</button>
     </div>
     <script src="./js/validform.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

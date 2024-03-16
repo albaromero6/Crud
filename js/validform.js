@@ -21,75 +21,49 @@ document.addEventListener("DOMContentLoaded", function() {
         var factura = document.querySelector('input[name="factura"]:checked');
         var ofertas = document.getElementById('ofertas').checked;
 
+        var errores = [];
+
         if (nombre === '' || email === '' || dni === '' || pago === '' || producto === null || factura === null) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, complete todos los campos obligatorios',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('Por favor, complete todos los campos obligatorios.');
+        }
+
+        if (!/^[a-zA-Z]{2,}$/.test(nombre)) {
+            errores.push('El nombre debe contener al menos dos letras.');
         }
 
         if (!/^[a-zA-Z]{2,}$/.test(apellido)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'El apellido debe contener al menos dos letras',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('El apellido debe contener al menos dos letras.');
         }
 
         if (!/\S+@\S+\.\S+/.test(email)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, introduzca un correo electrónico válido',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('El email ha de tener un formato válido.');
         }
 
         if (!(/^\d{8}[a-zA-Z]$/.test(dni) || /^[a-zA-Z]\d{7}[a-zA-Z]$/.test(dni))) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, introduzca un DNI o NIF válido',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('El DNI o NIF ha de tener un formato válido.');
         }
 
         if (isNaN(pago) || pago < 20 || pago > 500) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'El pedido mínimo es de 20 y el máximo de 500 euros',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('El pedido mínimo es de 20 y el máximo de 500.');
         }
 
         if (producto === '') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Por favor, seleccione un producto',
-                customClass: {confirmButton: 'confirm-button'}
-            });
-            return; 
+            errores.push('Debe seleccionar un producto.');
         }
 
         if (!ofertas) {
+            errores.push('Por favor, marque la casilla para recibir nuestras ofertas.');
+        }
+
+        if (errores.length > 0) {
+            var mensajeError = errores.join('\n');
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Por favor, marque la casilla para recibir nuestras ofertas',
+                text: mensajeError,
                 customClass: {confirmButton: 'confirm-button'}
             });
             return; 
         }
-
     });
 });

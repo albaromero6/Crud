@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de pedidos</title>
     <link rel="stylesheet" href="./css/loginandcrudstyle.css">
-	<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 <body id="bodytable">
     <table>
@@ -16,6 +16,8 @@
                 <th scope="col">NOMBRE</th>
                 <th scope="col">APELLIDO</th>
                 <th scope="col">DNI</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">PRODUCTO</th>
                 <th scope="col">IMPORTE</th>
                 <th scope="col"></th>
             </tr>
@@ -26,39 +28,49 @@
                 <td data-label="nombre">Laura</td>
                 <td data-label="apellido">Martínez</td>
                 <td data-label="dni">77482363S</td>
+                <td data-label="email">lauramrtn@gmail.com</td>
+                <td data-label="producto">Nubes</td>
                 <td data-label="importe">215 €</td>
                 <td><button class="edit">Editar</button><button class="delete">Borrar</button></td>
             </tr>
             <tr>
                 <td data-label="pedido">2</td>
-                <td scope="row" data-label="nombre">Rodrigo</td>
+                <td data-label="nombre">Rodrigo</td>
                 <td data-label="apellido">García</td>
                 <td data-label="dni">44253312D</td>
+                <td data-label="email">rodrigarc89@gmail.com</td>
+                <td data-label="producto">Golosinas</td> 
                 <td data-label="importe">320 €</td>
                 <td><button class="edit">Editar</button><button class="delete">Borrar</button></td>
             </tr>
             <tr>
                 <td data-label="pedido">3</td>
-                <td scope="row" data-label="nombre">Marcos</td>
+                <td data-label="nombre">Marcos</td>
                 <td data-label="apellido">Rodríguez</td>
                 <td data-label="dni">44156612T</td>
+                <td data-label="email">marcosRi@gmail.com</td>
+                <td data-label="producto">Piruletas</td>
                 <td data-label="importe">250 €</td>
                 <td><button class="edit">Editar</button><button class="delete">Borrar</button></td>
             </tr>
             <tr>
                 <td data-label="pedido">4</td>
-                <td scope="row" data-label="Acount">María</td>
+                <td data-label="nombre">María</td>
                 <td data-label="apellido">Acosta</td>
                 <td data-label="dni">88126536M</td>
+                <td data-label="email">mariacost98@gmail.com</td>
+                <td data-label="producto">Golosinas</td>
                 <td data-label="importe">320 €</td>
                 <td><button class="edit">Editar</button><button class="delete">Borrar</button></td>
             </tr>
             <tr>
-                <td data-label="importe">5</td>
+                <td data-label="pedido">5</td>
                 <td data-label="nombre">Marina</td>
                 <td data-label="apellido">Alcaide</td>
                 <td data-label="dni">44667859N</td>
-                <td data-label="pedido">215 €</td>
+                <td data-label="email">marinaalcaidet@gmail.com</td>
+                <td data-label="producto">Nubes</td> 
+                <td data-label="importe">215 €</td>
                 <td><button class="edit">Editar</button><button class="delete">Borrar</button></td>
             </tr>
         </tbody>
@@ -67,6 +79,3 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
-
-
-

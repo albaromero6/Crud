@@ -12,33 +12,33 @@
         <div class="title">NUEVO PEDIDO</div>
 
         <div class="input-container ic1">
-            <input placeholder="Nombre" type="text" class="input" id="nombre">
+            <input placeholder="Nombre *" type="text" class="input" id="nombre" required>
             <div class="cut"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Apellido" type="text" class="input" id="apellido">
+            <input placeholder="Apellido *" type="text" class="input" id="apellido" required>
             <div class="cut"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Correo Electrónico" type="email" class="input" id="email">
+            <input placeholder="Correo Electrónico *" type="email" class="input" id="email" required>
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="DNI o NIE" type="text" class="input" id="dni">
+            <input placeholder="DNI o NIE *" type="text" class="input" id="dni" required>
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <input placeholder="Importe" type="text" class="input" id="pago">
+            <input placeholder="Importe *" type="text" class="input" id="pago" required>
             <div class="cut cut-short"></div>
         </div>
 
         <div class="input-container ic2">
-            <select class="input" id="producto">
-                <option value="" disabled selected>Seleccione el producto</option>
+            <select class="input" id="producto" required>
+                <option value="" disabled selected>Seleccione el producto *</option>
                 <option value="1">Piruletas</option>
                 <option value="2">Golosinas</option>
                 <option value="3">Nubes</option>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="input-container ic2">
-            <div class="titulo">¿Quiere factura?</div>
+            <div class="titulo">¿Quiere factura? *</div>
             <input type="radio" id="factura_si" name="factura" value="si">
             <label for="factura_si">Sí</label>
             <input type="radio" id="factura_no" name="factura" value="no">
@@ -55,12 +55,12 @@
         </div>
 
         <div class="input-container ic2">
-            <div class="titulo">Acepto recibir información acerca de ofertas</div>
+            <div class="titulo">Acepto recibir información acerca de ofertas *</div>
             <input type="checkbox" id="ofertas" name="ofertas">
             <label for="ofertas">Sí</label>
         </div>
 
-        <button class="submit" type="text">Crear</button>
+        <button class="submit" type="submit">Crear</button>
     </div>
     <script src="./js/validform.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
